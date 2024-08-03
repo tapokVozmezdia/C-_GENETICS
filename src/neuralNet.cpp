@@ -226,7 +226,7 @@ void NeuralNet::draw_net(const Vec2& pos,
                 DrawLine(
                     posx,
                     jt,
-                    (float)pos.x + shift * scale * 220 - 21,
+                    (float)pos.x + shift * scale * 220 - (21 * scale),
                     pos.y + (60 * scale * line),
                     c
                 );
@@ -241,7 +241,7 @@ void NeuralNet::draw_net(const Vec2& pos,
 
     line = 0;
 
-    int tmp = m * 30 - (30 * ou);
+    int tmp =(m * 30 - (30 * ou)) * scale;
 
     for (int i = 0; i < ou; i++)
     {
@@ -292,7 +292,7 @@ void NeuralNet::draw_net(const Vec2& pos,
             DrawLine(
                 posx,
                 jt,
-                (float)pos.x + shift * scale * 220 - 21,
+                (float)pos.x + shift * scale * 220 - (21 * scale),
                 pos.y + (60 * scale * line) + tmp,
                 c
             );

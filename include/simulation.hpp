@@ -34,9 +34,24 @@ class Simulation
             uVec2 SIZE = {500, 500};
         } field;
 
-        void net_click_check();
+        void __draw_safe_zones();
+
+        // n^2 complexity, use may slow the simulation down
+        void __check_sense_relations();
+
+        void __forget_sense_relations();
+
+        void __net_click_check();
+        void __pause_click_check();
+        void __safe_click_check();
+
+        void __respawn_populus();
 
         NeuralNet* _selected_net = nullptr;
+        std::list<std::pair<Vec2, double>> _safe_zones;
         std::list<Cell> _cells;
 
+        bool _pause = false;
+        uint _clock = 0;
+        uint _epoch = 0;
 };

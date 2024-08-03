@@ -12,6 +12,8 @@ class Cell
         Cell(cint _x, cint _y);
 
         void set_field(cuint margin, const uVec2& size);
+        void add_sense();
+        void forget_sense();
 
         uVec2 get_pos() const;
 
@@ -21,6 +23,8 @@ class Cell
 
         void draw();
         void update();
+
+        uint __sense_others = 0;
 
     private:
         void __draw();
@@ -36,4 +40,6 @@ class Cell
 
         uint __time_alive = 0;
         uint __bumped = 0;
+
+        // uint __sense_others = 0;
 };
