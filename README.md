@@ -1,3 +1,3 @@
 # C-_GENETICS
 
-## В этом проекте полно магических чисел и до ужаса неэффективного кода. А еще тут почти отсутствуют комментарии. Развлекайтесь.  
+## Thos project has a ton of magic numbers and lots of gnarly ineffective code. Also it has zero to none comments. My bad. ¯\_(ツ)_/¯   
